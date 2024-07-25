@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../styles/not-found.module.css";
+import styles from "../styles/error.module.css";
 
 export default function Error() {
   return <div className={styles.div}>Error</div>;
