@@ -1,11 +1,18 @@
 .container {
   display: flex;
   flex-flow: column wrap;
+  gap: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .catetory {
   display: flex;
-  margin: 2px;
   padding: 10px;
   border: 2px solid black;
 }

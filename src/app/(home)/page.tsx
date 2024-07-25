@@ -27,6 +27,9 @@ export default async function Home() {
   const bookCategories = result.results;
   return (
     <div className={styles.container}>
+      <div className={styles.title}>
+        THE NEW YORK TIMES BEST SELLER EXPLORER
+      </div>
       {bookCategories === null || bookCategories === undefined ? (
         <div>No result</div>
       ) : (
