@@ -35,6 +35,7 @@ export default async function Home() {
       ) : (
         bookCategories.map((catetory, index) => (
           <Link
+            prefetch={false}
             href={`/list/${catetory.list_name_encoded}`}
             className={styles.catetory}
             key={index}
