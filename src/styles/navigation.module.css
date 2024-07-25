@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.nav a:hover {
+  cursor: pointer;
+}
