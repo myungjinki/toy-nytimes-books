@@ -79,6 +79,8 @@ export default async function Category({
 }: IParams) {
   const result = await getBookList(list_name_encoded);
   const books = result.results?.books;
+  console.log(result);
+  console.log(books);
   return (
     <div className={styles.container}>
       {books === null || books === undefined
