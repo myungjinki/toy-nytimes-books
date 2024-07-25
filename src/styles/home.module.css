@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.catetory {
+  display: flex;
+  margin: 2px;
+  padding: 10px;
+  border: 2px solid black;
+}
