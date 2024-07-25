@@ -78,31 +78,39 @@ export default async function Category({
   params: { list_name_encoded },
 }: IParams) {
   const result = await getBookList(list_name_encoded);
-  const books = result.results.books;
+  const books = result.results?.books;
   return (
     <div className={styles.container}>
       {books === null || books === undefined
         ? "Can't find books"
-        : books.map((book, index) => (
-            <div className={styles.book} key={index}>
-              <Image
-                className={styles.cover}
-                src={book.book_image!}
-                alt={book.title}
-                width={100}
-                height={100}
-              />
-              <div className={styles.title}>{book.title}</div>
-              <div className={styles.author}>{book.author}</div>
-              <a
-                className={styles.buy}
-                href={book.amazon_product_url!}
-                target="_blank"
-              >
-                Buy now &rarr;
-              </a>
-            </div>
-          ))}
+        : books.map((book, index) => {
+            if (!book.book_image) {
+              book.book_image = "";
+            }
+            if (!book.amazon_product_url) {
+              book.amazon_product_url = "";
+            }
+            return (
+              <div className={styles.book} key={index}>
+                <Image
+                  className={styles.cover}
+                  src={book.book_image}
+                  alt={book.title}
+                  width={100}
+                  height={100}
+                />
+                <div className={styles.title}>{book.title}</div>
+                <div className={styles.author}>{book.author}</div>
+                <a
+                  className={styles.buy}
+                  href={book.amazon_product_url}
+                  target="_blank"
+                >
+                  Buy now &rarr;
+                </a>
+              </div>
+            );
+          })}
     </div>
   );
 }
