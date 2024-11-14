@@ -1,9 +1,4 @@
-const BASE_URL = "https://books-api.nomadcoders.workers.dev";
-
-export async function getBookCategoryList() {
-  const response = await fetch(`${BASE_URL}/list`);
-  return await response.json();
-}
+import { BASE_URL } from "@/app/lib/constants";
 
 // TODO: Error handling
 export async function getBookList(name: string) {
