@@ -11,7 +11,7 @@ export default function About() {
         </a>
       </div>
       <div>
-        <h2>Stack</h2>
+        <h2>Packages</h2>
         <ul>
           <li>
             <a href="https://nextjs.org/" target="_blank">
