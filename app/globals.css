@@ -37,6 +37,10 @@ li {
   margin-left: 1rem;
 }
 
+a {
+  text-decoration: underline;
+}
+
 .mea-culpa-regular {
   font-family: "Mea Culpa", cursive;
   font-weight: 400;

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col h-screen gap-4 p-8">
+    <div className="flex flex-col items-center h-screen gap-4 p-8">
       <h1 className="mea-culpa-regular">The New York Times Books</h1>
       <div>
         This project use{" "}
@@ -10,8 +10,8 @@ export default function About() {
           The New York Times API
         </a>
       </div>
-      <div>
-        <h2>Packages</h2>
+      <div className="flex flex-col items-start gap-4 w-72">
+        <h2 className="self-center">Packages</h2>
         <ul>
           <li>
             <a href="https://nextjs.org/" target="_blank">
