@@ -1,20 +1,27 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ReactElement } from "react";
 
 interface ButtonProps {
   Icon: ReactElement;
   text: string;
-  match?: boolean;
+  path: string;
 }
 
-export default function Button({ Icon, text, match }: ButtonProps) {
+export default function Button({ Icon, text, path = "/" }: ButtonProps) {
+  const pathname = usePathname();
   return (
-    <div
-      className={`flex flex-col items-center *:size-7 text-xs  ${
-        match ? "text-neutral-900" : "text-neutral-500"
-      }`}
-    >
-      {Icon}
-      {text}
-    </div>
+    <Link href={path}>
+      <div
+        className={`flex flex-col items-center *:size-7 text-xs  ${
+          pathname === path ? "text-neutral-900" : "text-neutral-500"
+        }`}
+      >
+        {Icon}
+        {text}
+      </div>
+    </Link>
   );
 }

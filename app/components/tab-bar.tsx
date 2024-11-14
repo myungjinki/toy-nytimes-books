@@ -8,9 +8,17 @@ import {
 export default function TabBar() {
   return (
     <div className="fixed bottom-0 flex w-full py-1 border-t-2 justify-evenly">
-      <Button Icon={<MagnifyingGlassIcon />} text="Search" match></Button>
-      <Button Icon={<HomeIcon />} text="Home"></Button>
-      <Button Icon={<InformationCircleIcon />} text="About"></Button>
+      <Button Icon={<HomeIcon />} text="Home" path="/"></Button>
+      <Button
+        Icon={<MagnifyingGlassIcon />}
+        text="Search"
+        path="/search"
+      ></Button>
+      <Button
+        Icon={<InformationCircleIcon />}
+        text="About"
+        path="/about"
+      ></Button>
     </div>
   );
 }
