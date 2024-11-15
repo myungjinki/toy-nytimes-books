@@ -16,7 +16,7 @@ export default async function CategoryCard({
   return (
     <Link
       href={`/list/${list_name_encoded}`}
-      className="flex justify-between w-full h-48 shadow-2xl rounded-2xl"
+      className="flex justify-between w-full h-48 overflow-hidden shadow-2xl rounded-2xl"
     >
       <div className="flex items-center w-1/2 px-4 font-serif text-xl font-semibold">
         {list_name}
