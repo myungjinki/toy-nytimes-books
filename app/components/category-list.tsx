@@ -3,7 +3,6 @@ import CategoryCard from "./category-card";
 
 export default async function CategoryList() {
   const { results } = await getCategoryList();
-  console.log(results);
   return (
     <div className="flex flex-col gap-4">
       <h2 className="font-serif text-2xl font-bold">More to Explore</h2>
@@ -12,6 +11,7 @@ export default async function CategoryList() {
           <CategoryCard
             key={category.list_name}
             list_name={category.list_name}
+            list_name_encoded={category.list_name_encoded}
           ></CategoryCard>
         ))}
       </main>
