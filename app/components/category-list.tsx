@@ -4,7 +4,7 @@ import CategoryCard from "./category-card";
 export default async function CategoryList() {
   const { results } = await getCategoryList();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 p-8">
       <h2 className="font-serif text-2xl font-bold">More to Explore</h2>
       <main className="flex flex-col gap-4">
         {results?.map((category) => (
