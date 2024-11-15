@@ -7,7 +7,7 @@ import {
 
 export default function TabBar() {
   return (
-    <div className="fixed bottom-0 flex w-full py-1 border-t-2 justify-evenly">
+    <div className="fixed bottom-0 flex w-96 py-1 border-t-2 justify-evenly bg-white">
       <Button Icon={<HomeIcon />} text="Home" path="/"></Button>
       <Button
         Icon={<MagnifyingGlassIcon />}

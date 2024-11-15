@@ -27,10 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-300`}
       >
-        {children}
-        <TabBar />
+        <div className="flex items-center justify-center">
+          <div className="w-96 bg-white">
+            {children}
+            <TabBar />
+          </div>
+        </div>
       </body>
     </html>
   );
