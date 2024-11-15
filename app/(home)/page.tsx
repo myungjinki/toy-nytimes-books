@@ -3,7 +3,7 @@ import HomeHeader from "../components/home-header";
 
 export default async function Home() {
   return (
-    <div className="my-8">
+    <div>
       <HomeHeader />
       <CategoryList />
     </div>

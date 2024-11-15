@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getBookList } from "../(home)/list/[id]/actions";
+import Link from "next/link";
 
 interface CategoryCardProps {
   list_name: string;
@@ -13,11 +14,14 @@ export default async function CategoryCard({
   const { results } = await getBookList(list_name_encoded);
   const books = results?.books.filter((book) => book.book_image).slice(0, 1);
   return (
-    <div className="w-full h-48 shadow-2xl rounded-2xl flex justify-between">
-      <div className="flex px-4 items-center text-xl font-serif font-semibold w-1/2">
+    <Link
+      href={`/list/${list_name_encoded}`}
+      className="flex justify-between w-full h-48 shadow-2xl rounded-2xl"
+    >
+      <div className="flex items-center w-1/2 px-4 font-serif text-xl font-semibold">
         {list_name}
       </div>
-      <div className="size-4 w-1/2 h-full relative">
+      <div className="relative w-1/2 h-full size-4">
         {books &&
           books.map((book) => (
             <Image
@@ -30,6 +34,6 @@ export default async function CategoryCard({
             />
           ))}
       </div>
-    </div>
+    </Link>
   );
 }

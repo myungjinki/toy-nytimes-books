@@ -30,8 +30,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-300`}
       >
         <div className="flex items-center justify-center">
-          <div className="w-96 bg-white">
-            {children}
+          <div className="bg-white w-96">
+            <div className="mb-16">{children}</div>
             <TabBar />
           </div>
         </div>
